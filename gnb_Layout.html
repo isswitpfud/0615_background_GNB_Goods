@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GNB에이아웃</title>
+    <link rel="stylesheet" href="style/style_Commen.css">
+    <style>
+        div#wrap {
+            width: 640px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 1px solid #000;
+        }
+
+        nav#gnb {
+            border: 1px solid #aaa;
+        }
+
+        #gnb>ul#mainMenu {}
+
+        #gnb a {
+            width: 140px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            padding: 0 30px;
+            display: inline-block;
+        }
+
+        #gnb a:hover {
+            color: rgba(68, 68, 68, 0.7);
+            font-weight: bold;
+        }
+
+        #gnb ul.subMenu {
+            display: none;
+
+            position: absolute;
+            background-color: #fff;
+        }
+
+        /*서브메뉴 숨기기*/
+
+    </style>
+
+    <!--제이쿼리 사용하기: 1. CDN방식(다운로드방식도존재함)-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--제이쿼리 관련코드 작성-->
+    <script>
+        $(function() {
+
+            $("li.mainli").mouseover(function() {
+                $("ul.subMenu").stop().slideDown(800);
+            });
+
+            $("li.mainli").mouseout(function() {
+                $("ul.subMenu").stop().slideUp(400);
+            });
+
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>GNB만들기</h1>
+        <!--nav#gnb>ul#mainMenu>li.mainli*4>a[href=#]{메뉴$}-->
+        <!--ul.subMenu>li.subLi*3>a[href=3]{sub$}
+-->
+        <nav id="gnb">
+            <ul id="mainMenu" class="flexContainer">
+                <li class="mainli">
+                    <a href="#">메뉴1</a>
+                    <ul class="subMenu">
+                        <li class="subLi">
+                            <a href="#">서브메뉴1</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴2</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mainli">
+                    <a href="#">메뉴2</a>
+                    <ul class="subMenu">
+                        <li class="subLi">
+                            <a href="#">서브메뉴1</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴2</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mainli">
+                    <a href="#">메뉴3</a>
+                    <ul class="subMenu">
+                        <li class="subLi">
+                            <a href="#">서브메뉴1</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴2</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mainli">
+                    <a href="#">메뉴4</a>
+                    <ul class="subMenu">
+                        <li class="subLi">
+                            <a href="#">서브메뉴1</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴2</a>
+                        </li>
+                        <li class="subLi">
+                            <a href="#">서브메뉴3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+</body>
+
+</html>

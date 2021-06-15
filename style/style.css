@@ -1,0 +1,14 @@
+@charset"UTF-8";
+
+body {
+    background-image: url(../images/background.png);
+
+    /*body요소를 전체화면배경으로 지정할때*/
+    background-repeat: no-repeat;
+    /*사이즈 가로100 세로100 적용*/
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    /*Body요소에 전체배경 이미지 적용고정*/
+    background-attachment: fixed;
+
+}

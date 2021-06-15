@@ -1,0 +1,27 @@
+@charset"UTF-8";
+nav#gnb {
+            border: 1px solid #aaa;
+        }
+
+        #gnb>ul#mainMenu {}
+
+        #gnb a {
+            width: 140px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            padding: 0 30px;
+            display: inline-block;
+        }
+
+        #gnb a:hover {
+            color: rgba(68, 68, 68, 0.7);
+            font-weight: bold;
+        }
+
+        #gnb ul.subMenu {
+            display: none;
+
+            position: absolute;
+            background-color: #fff;
+        }
